@@ -1,0 +1,129 @@
+.career-section {
+  min-height: 100vh;
+  padding: 140px 8vw 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.career-section h2 {
+  font-size: clamp(50px, 7vw, 100px);
+  line-height: 0.95;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 100px;
+  background: linear-gradient(90deg, #ffffff, #ff4d4d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.career-section h2 span {
+  display: block;
+}
+
+.career-info {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.career-info-box {
+  display: grid;
+  grid-template-columns: 1.2fr 80px 1.5fr;
+  align-items: center;
+  gap: 50px;
+  padding: 45px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.career-info-box:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.career-info-left h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.career-info-left p {
+  margin: 0;
+  font-size: 14px;
+  color: #ff4d4d;
+  letter-spacing: 1px;
+}
+
+.career-info-box h4 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.career-description {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .career-section {
+    padding: 100px 6vw 140px;
+  }
+
+  .career-info-box {
+    grid-template-columns: 1fr 60px;
+    gap: 25px;
+  }
+
+  .career-description {
+    grid-column: 1 / -1;
+    max-width: 700px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .career-section {
+    min-height: auto;
+    padding: 90px 24px 120px;
+  }
+
+  .career-section h2 {
+    font-size: 52px;
+    margin-bottom: 60px;
+  }
+
+  .career-info-box {
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    padding: 30px 0;
+  }
+
+  .career-info-left h3 {
+    font-size: 19px;
+  }
+
+  .career-info-left p {
+    font-size: 11px;
+  }
+
+  .career-info-box h4 {
+    font-size: 30px;
+  }
+
+  .career-description {
+    grid-column: 1 / -1;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
