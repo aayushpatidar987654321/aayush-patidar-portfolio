@@ -12,84 +12,98 @@ const projects = [
     category: "AI Video / UGC",
     tools: "Google Flow • AI Tools • Video Editing",
     video: "Ai Ugc.mp4",
+    link: "https://drive.google.com/file/d/1UaldUo9B75PZIz8KGih2G9KU1BhDzlGQ/view",
   },
   {
     title: "AI Aradhana",
     category: "AI Commercial",
     tools: "Google Flow • AI Video • Editing",
     video: "Ai Aradhana.mp4",
+    link: "https://drive.google.com/file/d/1trNRolVGdjbeoBenPMSJkcDVbqohTTY8/view",
   },
   {
     title: "Glasseo",
     category: "Product / Eyewear",
     tools: "Premiere Pro • AI • Color Grading",
     video: "Glasseo.mp4",
+    link: "https://drive.google.com/file/d/1C7_M1QJ6BVX3drRllTsU0U9azX2gOWk_/view",
   },
   {
     title: "Cinematic Edit",
     category: "Cinematic Video",
     tools: "Premiere Pro • Color Grading • Sound Design",
     video: "Cinematic.mp4",
+    link: "https://drive.google.com/file/d/1KbbGQtroWcaoHXNQOqM23-8Bp3IR5A3M/view",
   },
   {
     title: "Cheerio Text",
-    category: "Creative Motion",
-    tools: "Motion Graphics • AI • Video Editing",
+    category: "Motion Graphics",
+    tools: "After Effects • Motion Graphics • Typography",
     video: "Cheerio Text.mp4",
+    link: "https://drive.google.com/file/d/1rNQEHiDYGzhTWgzt_f-DHLK3QnTlc3hB/view",
   },
   {
     title: "Images to Video",
     category: "AI Video",
     tools: "AI Tools • Google Flow • Editing",
     video: "Images To Video.mp4",
+    link: "https://drive.google.com/file/d/1r8nkIa3tFf13nC9jGCK9g-lbbNMzotfi/view",
   },
   {
     title: "Mobile AI",
     category: "AI Creative",
     tools: "AI Tools • Motion • Video Editing",
     video: "Mobile Ai.mp4",
-  },
-  {
-    title: "Mumuso",
-    category: "Brand Content",
-    tools: "Premiere Pro • Creative Editing • Storytelling",
-    video: "Mumuso.mp4",
-  },
-  {
-    title: "Navaratri Creative",
-    category: "Festival Campaign",
-    tools: "AI Video • Motion Graphics • Editing",
-    video: "Navaratri Creative.mp4",
-  },
-  {
-    title: "2D Animation",
-    category: "Animation",
-    tools: "Motion Graphics • Animation • Editing",
-video: "2D-Animation.mp4",
-  },
-  {
-    title: "2D Character",
-    category: "Character Animation",
-    tools: "Animation • AI • Creative Editing",
-    video: "2D Character.mp4",
+    link: "https://drive.google.com/file/d/1OsVruP4zVv8qmj--afRJBnuKgWeFlmEb/view",
   },
   {
     title: "Modi Ji",
     category: "Social Media Content",
     tools: "Premiere Pro • Editing • AI Tools",
     video: "Modi Ji.mp4",
+    link: "https://drive.google.com/file/d/1YvHmk8mNkMwrJBhwA3U7S7R62gLsJrLY/view",
+  },
+  {
+    title: "Mumuso",
+    category: "Brand Content",
+    tools: "Premiere Pro • Creative Editing • Storytelling",
+    video: "Mumuso.mp4",
+    link: "https://drive.google.com/file/d/1ZRdqeYJfY5UNKddeKH1VfGKTQNC5Ua5A/view",
+  },
+  {
+    title: "Navaratri Creative",
+    category: "Festival Campaign",
+    tools: "AI Video • Motion Graphics • Editing",
+    video: "Navaratri Creative.mp4",
+    link: "https://drive.google.com/file/d/19kQrlnOH3q8zCcvHzGyuPQ3jnO4NK7nJ/view",
   },
   {
     title: "Sound Healing",
-    category: "Creative Video",
-    tools: "Editing • Sound Design • Color Grading",
+    category: "Wellness Content",
+    tools: "Video Editing • Color Grading • Sound Design",
     video: "Sound Healing.mp4",
+    link: "https://drive.google.com/file/d/1e1iu5XCc3uARu3oz4f2wZsTSfXZoZCIG/view",
   },
   {
-    title: "Yezdi Motorcycle",
-    category: "Cinematic Commercial",
-    tools: "Premiere Pro • Color Grading • Sound Design",
+    title: "Yezdi",
+    category: "Automotive / Cinematic",
+    tools: "Premiere Pro • Color Grading • Cinematic Editing",
     video: "yezdi_1.mp4",
+    link: "https://drive.google.com/file/d/1-jvGobQ6pjNn6jFT7Hdug22feGAQCZHB/view",
+  },
+  {
+    title: "2D Character",
+    category: "Character Animation",
+    tools: "Animation • AI • Creative Editing",
+    video: "2D Character.mp4",
+    link: "https://drive.google.com/file/d/1q_dMwMgzstukQbmm6tvKNxByt2EctyW1/view",
+  },
+  {
+    title: "2D Animation",
+    category: "Animation",
+    tools: "Motion Graphics • Animation • Editing",
+    video: "2D-Animation.mp4",
+    link: "https://drive.google.com/file/d/1_adbc65Ea5AAatepdJ3LX6taIdZ67plZ/view",
   },
 ];
 
@@ -152,11 +166,11 @@ const Work = () => {
                 <p>{project.tools}</p>
               </div>
 
-              <WorkImage
-                image="/images/placeholder.webp"
-                video={project.video}
-                alt={project.title}
-              />
+            <WorkImage
+  image={`/thumbnails/${project.video.replace(".mp4", ".png")}`}
+  link={project.link}
+  alt={project.title}
+/>
             </div>
           ))}
         </div>
